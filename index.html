@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Blossom Chat Webapp</title>
+  <link rel='stylesheet' href='style.css' type='text/css' />
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.16/peer.min.js"></script>
+
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+  <script src="chat.js"></script>
+</head>
+
+<body>
+  <div class="chat-area">
+    <div class="onlineUsersContainer">
+      <div class="chatbox-title">
+        Online User
+      </div>
+      <div class="onlineUserContainer">
+        <ul id="onlineUsers">
+
+          <li id="123" class="active"><a href="javascript:void(0)">Duong Van Truong</a><label class="chatNotificationCount"></label></li>
+          <li id="123" class=""><a href="javascript:void(0)">Tran Van A</a><label class="chatNotificationCount"></label></li>
+          <li id="123" class=""><a href="javascript:void(0)">Tran Van B</a><label class="chatNotificationCount">1</label></li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="chatContainer" style="display: none;">
+      <div id="chat-username">Chat message</div>
+
+      <ul id="messages">
+        <li class="chatMessageLeft">Chao anh di ne</li>
+        <li class="chatMessageLeft">hi anh di ne</li>
+        <li class="chatMessageRight">Xin chao các bạn</li>
+        <li class="chatMessageLeft">Heehe haha</li>
+        <li class="chatMessageRight">Duong Van Truong</li>
+          <li class="chatMessageRight">Duong Van Truong
+        </li>
+      </ul>
+
+      <span id="notifyTyping">user is typing</span>
+
+      <div id="box">
+        <input id="m" autocomplete="off" onkeyup="notifyTyping();" placeholder="Type a message ..." />
+        
+        <div id="btnSend" onclick="submitfunction();">
+          <i class="ion-paper-airplane"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
